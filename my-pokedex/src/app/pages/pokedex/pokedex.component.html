@@ -1,0 +1,21 @@
+<div class="container buttons">
+  <button class="button" (click)="managePrevPage($event)">>Prev&lt;</button>
+  <button class="button" (click)="manageNextPage($event)">>Next&lt;</button>
+</div>
+<main class="d-flex align-items-center my-4">
+  <div class="container">
+    <div class="row row-cols-2 row-cols-sm-3 row-cols-md-3 row-cols-xl-5 g-4">
+      <app-pokemon-card
+        class="col"
+        *ngFor="let card of pokemonList"
+        [data]="card"
+      ></app-pokemon-card>
+    </div>
+  </div>
+</main>
+<div class="container buttons">
+  <button class="button" (click)="managePrevPage($event)">>Prev&lt;</button>
+  <button class="button" (click)="manageNextPage($event)">>Next&lt;</button>
+</div>
+
+<app-footer></app-footer>

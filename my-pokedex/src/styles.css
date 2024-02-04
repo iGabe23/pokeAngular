@@ -1,0 +1,29 @@
+/* Global styles, and import other style files */
+@import url("https://fonts.googleapis.com/css2?family=Cambay:wght@400;700&family=Nunito:wght@300;400;500;600;700&display=swap");
+
+:root {
+  --background-color: #f1f1ec;
+  --text-color: #20211a;
+  --gray-light-color: #d1d3d4;
+  --icon-color: #111810;
+  /* darkmode */
+  --dark-background: #2a292b;
+  --dark-text: ;
+  --dark-icon: ;
+  --dark-: ;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: var(--background-color);
+}
+
+body {
+  font-family: "Cambay", "Nunito", sans-serif;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
