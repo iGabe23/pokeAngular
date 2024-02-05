@@ -21,7 +21,7 @@ export class PokemonService {
     }
     return [];
   }
-  //Method that communicates with the API
+  //Method that communicates with the API and gets the information that I need
   async getPokemonById(id: number | string): Promise<Pokemon> {
     const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}`);
     const data = await res.json();
@@ -36,6 +36,4 @@ export class PokemonService {
     };
     return pokemon;
   }
-  //Method that communicates with the API
-  getByType() {}
 }
