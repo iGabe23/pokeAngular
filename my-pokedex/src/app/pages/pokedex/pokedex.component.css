@@ -1,3 +1,6 @@
+
+
+/* Next Prev Buttons Start */
 .buttons {
   display: flex;
   justify-content: center;
@@ -19,3 +22,22 @@
   box-shadow: inset -4px 4px 0 #222;
   font-size: 0.9rem;
 }
+/* Next Prev Buttons End */
+
+/* Loading Spinner Start*/
+#loading-spinner {
+  display: block;
+  margin: auto;
+  width: 200px;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+/* Loading Spinner End*/

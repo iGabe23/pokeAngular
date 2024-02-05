@@ -1,7 +1,7 @@
 import { Component, Input, OnChanges, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 //
-import { Result } from '../../interfaces/poke-interface';
+import { Pokemon, Result } from '../../interfaces/poke-interface';
 import { PokemonService } from '../../services/pokemon.service';
 
 @Component({
@@ -14,14 +14,25 @@ import { PokemonService } from '../../services/pokemon.service';
 export class PokemonCardComponent implements OnChanges {
   //injecting the service
   pokemonService = inject(PokemonService);
-  id: string = '0'; //initializing the ID
+  //initializing variables
+  id: string = '0';
+
+  @Input() data?: Result;
+  @Input() pokemon?: Pokemon;
 
   //A method that is invoked after a default change
   ngOnChanges(): void {
     this.getInformation();
+    this.managePokemonById();
   }
 
-  @Input() data?: Result;
+  async managePokemonById() {
+    try {
+      this.pokemon = await this.pokemonService.getPokemonById(this.id);
+    } catch (error) {
+      console.error('Error fetching Pokemon:', error);
+    }
+  }
 
   getInformation(): void {
     //getting the ID
@@ -30,3 +41,8 @@ export class PokemonCardComponent implements OnChanges {
     }
   }
 }
+
+/*if (this.type) {
+  this.pokemonType = this.type.type.name;
+  console.log(this.pokemon);
+}*/

@@ -1,7 +1,17 @@
+/* card design start*/
 .card {
   isolation: isolate;
   overflow: hidden;
+  position: relative;
 }
+.card-id {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  
+}
+
+/* card img start */
 .gray-ball {
   position: absolute;
   top: 20%;
@@ -11,3 +21,7 @@
   opacity: 0.1;
   z-index: -1;
 }
+
+/* card nameID start */
+
+/* card stats start */

@@ -1,6 +1,10 @@
-<div class="container buttons">
-  <button class="button" (click)="managePrevPage($event)">>Prev&lt;</button>
-  <button class="button" (click)="manageNextPage($event)">>Next&lt;</button>
+<div class="container buttons d-xl-none">
+  <button type="button" class="button" (click)="managePrevPage($event)">
+    >Prev&lt;
+  </button>
+  <button type="button" class="button" (click)="manageNextPage($event)">
+    >Next&lt;
+  </button>
 </div>
 <main class="d-flex align-items-center my-4">
   <div class="container">
@@ -13,9 +17,19 @@
     </div>
   </div>
 </main>
-<div class="container buttons">
-  <button class="button" (click)="managePrevPage($event)">>Prev&lt;</button>
-  <button class="button" (click)="manageNextPage($event)">>Next&lt;</button>
-</div>
 
-<app-footer></app-footer>
+<img
+  src="./../../../assets/menuIcons/loading_spinner_01.png"
+  alt="loading"
+  id="loading-spinner"
+  *ngIf="loading"
+/>
+
+<div class="container buttons">
+  <button type="button" class="button" (click)="managePrevPage($event)">
+    >Prev&lt;
+  </button>
+  <button type="button" class="button" (click)="manageNextPage($event)">
+    >Next&lt;
+  </button>
+</div>
