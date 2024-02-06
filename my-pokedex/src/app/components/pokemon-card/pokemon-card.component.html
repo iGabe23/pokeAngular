@@ -1,7 +1,7 @@
 <div class="card user-select-none">
   <div class="text-decoration-none disable">
     <img
-      src="./../../../assets/img/pokeball-gray-flat.png"
+      src="./../../../assets/pokeball-gray-flat.png"
       class="position-absolute gray-ball"
     />
     <img
@@ -11,7 +11,7 @@
       class="card-img-top"
       alt="pokemon-img"
     />
-    
+
     @if (id.length === 1 ) {
     <h5 class="card-id">#{{ "00" + id }}</h5>
     } @if (id.length === 2) {
@@ -30,8 +30,14 @@
         }}</span>
       </p>
       <div class="pokemon-stat d-flex justify-content-around">
-        <p class="card-text weight">{{ pokemon?.weight + "kg" }}</p>
-        <p class="card-text height">{{ pokemon?.height + " m" }}</p>
+        <p class="card-text weight">
+          <img src="./../../../assets/ic_weight.png" class="icon" />
+          {{ pokemon?.weight + "kg" }}
+        </p>
+        <p class="card-text height">
+          <img src="./../../../assets/ic_height.png" class="icon" />
+          {{ pokemon?.height + " m" }}
+        </p>
       </div>
     </div>
   </div>

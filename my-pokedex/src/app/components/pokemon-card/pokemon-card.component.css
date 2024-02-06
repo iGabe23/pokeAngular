@@ -8,7 +8,6 @@
   position: absolute;
   top: 5px;
   right: 5px;
-  
 }
 
 /* card img start */
@@ -25,3 +24,8 @@
 /* card nameID start */
 
 /* card stats start */
+.icon {
+  height: 25px;
+  background-color: #b9b6b6;
+  border-radius: 6px;
+}
